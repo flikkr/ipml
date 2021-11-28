@@ -1,11 +1,11 @@
 import landing from "../../assets/landing.jpg";
-import Navbar from "../../components/Navbar";
+import Navbar from "../../components/nav/Navbar";
 
 function Home() {
   return (
     <div>
       <Navbar className='absolute z-20 w-full' />
-      <div className='relative'>
+      <section className='relative'>
         <img src={landing} alt='' className='h-screen w-full object-cover' />
         <div className='bg-gray-800 absolute top-0 h-screen w-full bg-opacity-40 z-10'>
           <div className='container text-gray-100 z-20 h-full flex flex-col items-start justify-center'>
@@ -21,7 +21,18 @@ function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
+      <section className='bg-gray-900 w-full'>
+        <div className='container lg:p-40 px-10 py-24 text-center'>
+          <h2 className='lg:mb-4 mb-7'>Who is Ivan Polunin?</h2>
+          <p>
+            Sit eiusmod occaecat laborum dolore et in dolor. In laboris commodo
+            ipsum consequat non et aute magna est. In incididunt nulla ipsum
+            tempor. In labore nulla labore ullamco non. Nostrud consequat
+            officia enim aute culpa cillum tempor tempor.
+          </p>
+        </div>
+      </section>
     </div>
   );
 }

@@ -1,0 +1,35 @@
+[{
+        "label": "About",
+        "redirect": "/about",
+        "items": [{
+                "label": "Who Are We?",
+                "redirect": "/who-are-we"
+            },
+            {
+                "label": "Dr Ivan Polunin",
+                "redirect": "/who-are-we"
+            }
+        ]
+    },
+    {
+        "label": "Projects",
+        "redirect": "/projects",
+        "items": [{
+                "label": "Who Are We?",
+                "redirect": "/who-are-we"
+            },
+            {
+                "label": "Dr Ivan Polunin",
+                "redirect": "/who-are-we"
+            }
+        ]
+    },
+    {
+        "label": "Contact",
+        "redirect": "/contact"
+    },
+    {
+        "label": "Media",
+        "redirect": "/media"
+    }
+]

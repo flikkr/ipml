@@ -23,4 +23,5 @@
     h6 {
         @apply text-xl text-gray-100 font-Playfair;
     }
+    p { @apply  text-gray-100 font-Playfair}
 }
