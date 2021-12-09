@@ -15,14 +15,9 @@
         "label": "Projects",
         "redirect": "/projects",
         "items": [{
-                "label": "Who Are We?",
-                "redirect": "/who-are-we"
-            },
-            {
-                "label": "Dr Ivan Polunin",
-                "redirect": "/who-are-we"
-            }
-        ]
+            "label": "The Book",
+            "redirect": "/book"
+        }]
     },
     {
         "label": "Contact",
