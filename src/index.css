@@ -5,6 +5,9 @@
 @tailwind utilities;
 
 @layer base {
+    html {
+        scroll-behavior: smooth;
+    }
     h1 {
         @apply text-6xl text-gray-100 font-Playfair;
     }

@@ -1,30 +1,51 @@
-import { useState } from "react";
-import Navlink from "./Navlink";
-import navItems from "./nav-items.json";
+import { useState, useEffect, Fragment } from "react";
+import NavItems from "./NavItems";
+import { Menu, Transition } from "@headlessui/react";
+
+const navScrollColor = "bg-gray-900";
+const navStaticColor = "bg-transparent";
 
 // https://tailwindui.com/components/application-ui/navigation/navbars
 export default function Navbar(props) {
   const [expanded, setExpanded] = useState(false);
-  const tabs = JSON.parse(JSON.stringify(navItems));
+  const items = getItems(NavItems);
 
-  const items = tabs.map((elem) => (
-    <Navlink label={elem.label} redirect={elem.redirect} items={elem.items} />
-  ));
+  const [scrollState, setScrollState] = useState(navStaticColor);
+
+  useEffect(() => {
+    let listener = document.addEventListener("scroll", (e) => {
+      const threshold = 60;
+      const offset = document.scrollingElement.scrollTop;
+      if (offset > threshold) {
+        if (scrollState !== navScrollColor) {
+          setScrollState(navScrollColor);
+        }
+      } else {
+        if (scrollState !== navStaticColor) {
+          setScrollState(navStaticColor);
+        }
+      }
+    });
+    return () => {
+      document.removeEventListener("scroll", listener);
+    };
+  }, [scrollState]);
 
   return (
-    <nav className={`bg-transparent ${props.className}`}>
+    <nav
+      className={`transition ease-in-out duration-200 ${scrollState} ${props.className}`}
+    >
       <div className='container mx-auto px-2 sm:px-6 lg:px-8'>
         <div className='relative flex items-center justify-between h-16'>
           <div className='absolute inset-y-0 left-0 flex items-center sm:hidden'>
             <button
               type='button'
-              className='inline-flex items-center justify-center p-2 rounded-md text-black hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'
+              className='inline-flex items-center justify-center p-2 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'
               onClick={() => setExpanded(!expanded)}
               aria-controls='mobile-menu'
               aria-expanded='false'
             >
               <span className='sr-only'>Open main menu</span>
-
               <svg
                 className='block h-6 w-6'
                 xmlns='http://www.w3.org/2000/svg'
@@ -40,7 +61,6 @@ export default function Navbar(props) {
                   d='M4 6h16M4 12h16M4 18h16'
                 />
               </svg>
-
               <svg
                 className='hidden h-6 w-6'
                 xmlns='http://www.w3.org/2000/svg'
@@ -76,10 +96,68 @@ export default function Navbar(props) {
       </div>
 
       <div className={`sm:hidden ${expanded ? "" : "hidden"}`} id='mobile-menu'>
-        <div className='px-2 pt-2 pb-3 mx-2 space-y-1 bg-black bg-opacity-30 text-white rounded font-Playfair'>
+        <div className='flex flex-col p-0 mx-2 space-y-1 text-white rounded font-Playfair'>
           {items}
         </div>
       </div>
     </nav>
   );
+}
+
+function getItems(tabs) {
+  return tabs.map((elem) => {
+    const showDropdown = elem?.items != null;
+
+    return (
+      <Menu as='div' className='relative inline-block'>
+        <div>
+          <Menu.Button className='block px-3 py-2 rounded-md text-white font-medium'>
+            {elem.label}
+
+            {showDropdown && (
+              <svg
+                fill='currentColor'
+                viewBox='0 0 20 20'
+                class='inline w-4 h-4 ml-2 transition-transform duration-200 transform md:-mt-1'
+              >
+                <path
+                  fill-rule='evenodd'
+                  d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z'
+                  clip-rule='evenodd'
+                ></path>
+              </svg>
+            )}
+          </Menu.Button>
+        </div>
+
+        {showDropdown && (
+          <div className='flex flex-row'>
+            <Transition
+              as={Fragment}
+              enter='transition ease-out duration-100'
+              enterFrom='transform opacity-0 scale-95'
+              enterTo='transform opacity-100 scale-100'
+              leave='transition ease-in duration-75'
+              leaveFrom='transform opacity-100 scale-100'
+              leaveTo='transform opacity-0 scale-95'
+            >
+              <Menu.Items className='absolute left-0 z-10 w-56 mt-2 origin-top-left bg-gray-800 rounded-md shadow-lg p-1'>
+                {elem?.items.map((item) => (
+                  <Menu.Item>
+                    {({ active }) => (
+                      <button
+                        className={`w-full p-2 text-left text-sm text-white rounded-md hover:bg-gray-700`}
+                      >
+                        {item.label}
+                      </button>
+                    )}
+                  </Menu.Item>
+                ))}
+              </Menu.Items>
+            </Transition>
+          </div>
+        )}
+      </Menu>
+    );
+  });
 }
