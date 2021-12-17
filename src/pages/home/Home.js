@@ -1,9 +1,11 @@
 import landing from "../../assets/landing.jpg";
+import ip from "../../assets/ip.jpg";
+import { theHumanistUrl } from "../../assets/Video";
 import Navbar from "../../components/nav/Navbar";
 
 function Home() {
   return (
-    <div className="">
+    <div className=''>
       <Navbar className='fixed z-20 w-full' />
       <section id='landing' className='relative'>
         <img src={landing} alt='' className='h-screen w-full object-cover' />
@@ -25,7 +27,7 @@ function Home() {
           </div>
         </div>
       </section>
-      <section id='sg' className='bg-gray-900 w-full'>
+      <section id='sg' className='w-full'>
         <div className='container lg:p-40 px-10 py-24 text-center'>
           <h2 className='lg:mb-4 mb-7'>Singapore 50 years ago</h2>
           <p>
@@ -36,8 +38,9 @@ function Home() {
           </p>
         </div>
       </section>
-      <section id='who-is-ip' className='bg-gray-900 w-full'>
-        <div className='container lg:p-40 px-10 py-24 text-center'>
+      <section id='who-is-ip' className='w-full'>
+        <div className='container lg:p-40 px-10 py-24 text-center flex '>
+          <img src={ip} alt='Ivan Polunin' />
           <h2 className='lg:mb-4 mb-7'>Who is Ivan Polunin?</h2>
           <p>
             Sit eiusmod occaecat laborum dolore et in dolor. In laboris commodo
