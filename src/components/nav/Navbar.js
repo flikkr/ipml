@@ -1,12 +1,13 @@
 import { useState, useEffect, Fragment } from "react";
 import NavItems from "./NavItems";
+import Caret from "../Caret";
 import { Menu, Transition } from "@headlessui/react";
 
 const navScrollColor = "bg-gray-900";
 const navStaticColor = "bg-transparent";
 
 // https://tailwindui.com/components/application-ui/navigation/navbars
-export default function Navbar(props) {
+export default function Navbar(params) {
   const [expanded, setExpanded] = useState(false);
   const items = getItems(NavItems);
 
@@ -33,7 +34,7 @@ export default function Navbar(props) {
 
   return (
     <nav
-      className={`transition ease-in-out duration-200 ${scrollState} ${props.className}`}
+      className={`transition ease-in-out duration-200 ${scrollState} ${params.className}`}
     >
       <div className='container mx-auto px-2 sm:px-6 lg:px-8'>
         <div className='relative flex items-center justify-between h-16'>
@@ -113,20 +114,7 @@ function getItems(tabs) {
         <div>
           <Menu.Button className='block px-3 py-2 rounded-md text-white font-medium'>
             {elem.label}
-
-            {showDropdown && (
-              <svg
-                fill='currentColor'
-                viewBox='0 0 20 20'
-                class='inline w-4 h-4 ml-2 transition-transform duration-200 transform md:-mt-1'
-              >
-                <path
-                  fill-rule='evenodd'
-                  d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z'
-                  clip-rule='evenodd'
-                ></path>
-              </svg>
-            )}
+            {showDropdown && <Caret />}
           </Menu.Button>
         </div>
 

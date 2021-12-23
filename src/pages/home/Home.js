@@ -1,7 +1,6 @@
 import landing from "../../assets/landing.jpg";
-import ip from "../../assets/ip.jpg";
-import { theHumanistUrl } from "../../assets/Video";
 import Navbar from "../../components/nav/Navbar";
+import { IvanPoluninSection } from "./sections/Sections";
 
 function Home() {
   return (
@@ -38,18 +37,7 @@ function Home() {
           </p>
         </div>
       </section>
-      <section id='who-is-ip' className='w-full'>
-        <div className='container lg:p-40 px-10 py-24 text-center flex '>
-          <img src={ip} alt='Ivan Polunin' />
-          <h2 className='lg:mb-4 mb-7'>Who is Ivan Polunin?</h2>
-          <p>
-            Sit eiusmod occaecat laborum dolore et in dolor. In laboris commodo
-            ipsum consequat non et aute magna est. In incididunt nulla ipsum
-            tempor. In labore nulla labore ullamco non. Nostrud consequat
-            officia enim aute culpa cillum tempor tempor.
-          </p>
-        </div>
-      </section>
+      <IvanPoluninSection />
     </div>
   );
 }
