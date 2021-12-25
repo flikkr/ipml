@@ -5,7 +5,7 @@ export default function HighlightItem(params) {
 
   return (
     <div
-      className='bg-gray-800 p-3 rounded-md'
+      className={`bg-gray-800 p-3 h-auto rounded-md`}
       onMouseEnter={() => setExpanded(true)}
       onMouseLeave={() => setExpanded(false)}
     >
@@ -14,12 +14,11 @@ export default function HighlightItem(params) {
         <h6>{params.title}</h6>
       </div>
       <div
-        className={`text-left mt-5 ease-in-out ${
-          expanded ? "max-h-96" : " max-h-0"
+        className={`text-left transition-all ease-in-out overflow-hidden ${
+          expanded ? "max-h-96" : "max-h-0"
         }`}
-        style={{ transition: "max-height" }}
       >
-        <p>
+        <p className='mt-5'>
           Exercitation et eu ipsum quis quis duis et sunt incididunt magna.
           Aliquip velit fugiat cillum minim est minim dolore ipsum nulla sit.
           Sit ea proident ipsum tempor non. Sint esse ut laboris dolor laboris

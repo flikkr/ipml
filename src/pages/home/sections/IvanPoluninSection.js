@@ -39,9 +39,9 @@ export function IvanPoluninSection() {
 
   return (
     <section id='who-is-ip' className='w-full'>
-      <div className='container lg:p-40 px-10 py-24 text-center'>
+      <div className='container lg:p-40 md:p-20 py-24 text-center'>
         <h2 className='mb-7 lg:mb-8'>Who is Ivan Polunin?</h2>
-        <div className='mb-5 grid grid-cols-2 gap-5 items-center'>
+        <div className='mb-5 md:grid md:grid-cols-2 md:gap-5 space-y-3 items-center'>
           <img src={ipImage} alt='Ivan Polunin' />
           <p className='text-left'>
             Sit eiusmod occaecat laborum dolore et in dolor. In laboris commodo
@@ -54,7 +54,7 @@ export function IvanPoluninSection() {
         <iframe
           // width='560'
           // height='315'
-          className='w-full md:w-4/5'
+          className='w-full my-16 mx-auto h-3/5 md:w-4/5'
           src='https://www.youtube.com/embed/qP1_ilEYHFk'
           title='YouTube video player'
           frameborder='0'
