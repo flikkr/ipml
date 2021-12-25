@@ -1,7 +1,7 @@
 export function ContactUsSection() {
   return (
     <div className='container'>
-      <form className='bg-gray-800 p-5 w-1/3 mx-auto rounded shadow flex flex-col items-center'>
+      <form className='bg-gray-800 p-5 md:w-1/2 lg:w-1/3 mx-auto rounded shadow flex flex-col items-center'>
         <h3 className='mb-7'>Contact us</h3>
         <div className='w-full mb-3'>
           <label className='block text-sm mb-2' for='contact-email'>
