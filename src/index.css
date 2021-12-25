@@ -29,5 +29,11 @@
     h6 {
         @apply text-xl text-gray-100 font-Playfair;
     }
-    p { @apply  text-gray-100 font-Playfair}
+    p, label { @apply  text-gray-100 font-Playfair}
+    input, textarea { 
+        @apply bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white
+    }
+    .btn {
+        @apply bg-gray-900 tracking-wider font-Playfair py-3 px-5 rounded-sm text-gray-100 hover:bg-gray-800
+    }
 }

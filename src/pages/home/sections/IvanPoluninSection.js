@@ -1,5 +1,4 @@
 import ipImage from "../../../assets/ip.jpg";
-import { theHumanistUrl } from "../../../assets/Video";
 import HighlightItem from "../../../components/HighlightItem";
 
 const details = [

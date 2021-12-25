@@ -1,6 +1,6 @@
 import landing from "../../assets/landing.jpg";
 import Navbar from "../../components/nav/Navbar";
-import { IvanPoluninSection } from "./sections/Sections";
+import { IvanPoluninSection, ContactUsSection } from "./sections/Sections";
 
 function Home() {
   return (
@@ -38,6 +38,7 @@ function Home() {
         </div>
       </section>
       <IvanPoluninSection />
+      <ContactUsSection />
     </div>
   );
 }
