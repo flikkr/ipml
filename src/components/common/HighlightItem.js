@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function HighlightItem(params) {
+export function HighlightItem(params) {
   const [expanded, setExpanded] = useState(false);
 
   return (

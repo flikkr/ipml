@@ -1,5 +1,5 @@
 import ipImage from "../../../assets/ip.jpg";
-import HighlightItem from "../../../components/HighlightItem";
+import { HighlightItem } from "../../../components/common/Common";
 
 const details = [
   {
@@ -38,7 +38,7 @@ export function IvanPoluninSection() {
   ));
 
   return (
-    <section id='who-is-ip' className='w-full'>
+    <section id='who-is-ip' className='container w-full'>
       <div className='container lg:p-40 md:p-20 py-24 text-center'>
         <h2 className='mb-7 lg:mb-8'>Who is Ivan Polunin?</h2>
         <div className='mb-5 md:grid md:grid-cols-2 md:gap-5 space-y-3 items-center'>

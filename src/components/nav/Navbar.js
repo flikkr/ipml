@@ -1,6 +1,6 @@
 import { useState, useEffect, Fragment } from "react";
 import NavItems from "./NavItems";
-import Caret from "../Caret";
+import Caret from "../misc/Caret";
 import { Menu, Transition } from "@headlessui/react";
 
 const navScrollColor = "bg-gray-900";
