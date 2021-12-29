@@ -38,31 +38,29 @@ export function IvanPoluninSection() {
   ));
 
   return (
-    <section id='who-is-ip' className='container w-full'>
-      <div className='container lg:p-40 md:p-20 py-24 text-center'>
-        <h2 className='mb-7 lg:mb-8'>Who is Ivan Polunin?</h2>
-        <div className='mb-5 md:grid md:grid-cols-2 md:gap-5 space-y-3 items-center'>
-          <img src={ipImage} alt='Ivan Polunin' />
-          <p className='text-left'>
-            Sit eiusmod occaecat laborum dolore et in dolor. In laboris commodo
-            ipsum consequat non et aute magna est. In incididunt nulla ipsum
-            tempor. In labore nulla labore ullamco non. Nostrud consequat
-            officia enim aute culpa cillum tempor tempor.
-          </p>
-        </div>
-
-        <iframe
-          // width='560'
-          // height='315'
-          className='w-full my-16 mx-auto h-3/5 md:w-4/5'
-          src='https://www.youtube.com/embed/qP1_ilEYHFk'
-          title='YouTube video player'
-          frameborder='0'
-          allow='accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-          allowfullscreen
-        ></iframe>
-        <div className='space-y-5'>{attributes}</div>
+    <section id='who-is-ip'>
+      <h2 className='mb-7 text-center'>Who is Ivan Polunin?</h2>
+      <div className='mb-5 md:grid md:grid-cols-2 md:gap-5 space-y-3 items-center'>
+        <img src={ipImage} alt='Ivan Polunin' />
+        <p className='text-left'>
+          Sit eiusmod occaecat laborum dolore et in dolor. In laboris commodo
+          ipsum consequat non et aute magna est. In incididunt nulla ipsum
+          tempor. In labore nulla labore ullamco non. Nostrud consequat officia
+          enim aute culpa cillum tempor tempor.
+        </p>
       </div>
+
+      <iframe
+        // width='560'
+        // height='315'
+        className='w-full my-16 mx-auto h-3/5 md:w-4/5'
+        src='https://www.youtube.com/embed/qP1_ilEYHFk'
+        title='YouTube video player'
+        frameborder='0'
+        allow='accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+        allowfullscreen
+      ></iframe>
+      <div className='space-y-5'>{attributes}</div>
     </section>
   );
 }

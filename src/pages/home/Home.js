@@ -3,8 +3,10 @@ import Navbar from "../../components/nav/Navbar";
 import {
   IvanPoluninSection,
   ContactUsSection,
+  SingaporePastSection,
   ProjectsSection,
 } from "./sections/Sections";
+import { Footer } from "../../components/nav/Footer";
 
 function Home() {
   return (
@@ -27,20 +29,13 @@ function Home() {
           </div>
         </div>
       </section>
-      <section id='sg' className='w-full'>
-        <div className='container md:p-40 px-10 py-24 text-center'>
-          <h2 className='lg:mb-4 mb-7'>Singapore 50 years ago</h2>
-          <p>
-            Sit eiusmod occaecat laborum dolore et in dolor. In laboris commodo
-            ipsum consequat non et aute magna est. In incididunt nulla ipsum
-            tempor. In labore nulla labore ullamco non. Nostrud consequat
-            officia enim aute culpa cillum tempor tempor.
-          </p>
-        </div>
-      </section>
-      <IvanPoluninSection />
-      <ContactUsSection />
-      <ProjectsSection />
+      <div className='container px-6 py-20 md:p-60 md:pb-20 space-y-20 md:space-y-60'>
+        <SingaporePastSection />
+        <IvanPoluninSection />
+        <ProjectsSection />
+        <ContactUsSection />
+      </div>
+      <Footer />
     </div>
   );
 }

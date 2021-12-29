@@ -14,7 +14,7 @@ export function HighlightItem(params) {
         <h6>{params.title}</h6>
       </div>
       <div
-        className={`text-left transition-all ease-in-out overflow-hidden ${
+        className={`text-left transition-all ease-in-out duration-500 overflow-hidden ${
           expanded ? "max-h-96" : "max-h-0"
         }`}
       >

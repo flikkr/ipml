@@ -1,8 +1,23 @@
 export function ContactUsSection() {
   return (
-    <div className='container'>
-      <form className='bg-gray-800 p-5 md:w-1/2 lg:w-1/3 mx-auto rounded shadow flex flex-col items-center'>
-        <h3 className='mb-7'>Contact us</h3>
+    <section>
+      <div className='mb-7 text-center'>
+        <h2 className='mb-7'>Contact us</h2>
+        <p>
+          Interested in working with us or using our material? You can browse
+          available resources through the
+          <a className='text-green-300 focus:text-green-200 underline' href='#'>
+            National Library Board (NLB)
+          </a>
+          website. You can contact us using the form below and we will get back
+          to you as soon as possible.
+        </p>
+      </div>
+      <form
+        id='contact-form'
+        onSubmit={(e) => validateForm(e)}
+        className='bg-gray-800 p-5 md:w-1/2 mx-auto rounded shadow flex flex-col items-center'
+      >
         <div className='w-full mb-3'>
           <label className='block text-sm mb-2' for='contact-email'>
             Email
@@ -22,6 +37,8 @@ export function ContactUsSection() {
         </div>
         <button className='btn mt-3'>Submit</button>
       </form>
-    </div>
+    </section>
   );
 }
+
+function validateForm(e) {}
