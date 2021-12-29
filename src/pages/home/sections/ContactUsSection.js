@@ -6,7 +6,7 @@ export function ContactUsSection() {
         <p>
           Interested in working with us or using our material? You can browse
           available resources through the
-          <a className='text-green-300 focus:text-green-200 underline' href='#'>
+          <a className='link' href='#'>
             National Library Board (NLB)
           </a>
           website. You can contact us using the form below and we will get back

@@ -36,7 +36,7 @@
     .btn {
         @apply bg-gray-900 tracking-wider font-Playfair py-3 px-5 rounded-sm text-gray-100 hover:bg-gray-800
     }
-    .transition-max-h {
-        transition: max-height;
+    .link {
+        @apply text-green-300 focus:text-green-200 underline
     }
 }
