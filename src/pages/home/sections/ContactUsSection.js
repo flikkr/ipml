@@ -6,9 +6,7 @@ export function ContactUsSection() {
         <p>
           Interested in working with us or using our material? You can browse
           available resources through the
-          <a className='link' href='#'>
-            National Library Board (NLB)
-          </a>
+          <a href='#'> National Library Board (NLB) </a>
           website. You can contact us using the form below and we will get back
           to you as soon as possible.
         </p>
@@ -19,13 +17,13 @@ export function ContactUsSection() {
         className='bg-gray-800 p-5 md:w-1/2 mx-auto rounded shadow flex flex-col items-center'
       >
         <div className='w-full mb-3'>
-          <label className='block text-sm mb-2' for='contact-email'>
+          <label className='block text-sm mb-2' htmlFor='contact-email'>
             Email
           </label>
           <input id='contact-email' type={"email"} name='email' />
         </div>
         <div className='w-full'>
-          <label className='block text-sm mb-2' for='contact-message'>
+          <label className='block text-sm mb-2' htmlFor='contact-message'>
             Message
           </label>
           <textarea

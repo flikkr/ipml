@@ -35,8 +35,9 @@ function getProjects() {
     },
   ];
 
-  return projects.map((project) => (
+  return projects.map((project, i) => (
     <Card
+      key={i}
       imgSrc={project.imgSrc}
       imgAlt={project.imgAlt}
       title={project.title}

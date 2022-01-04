@@ -18,12 +18,7 @@ export function HighlightItem(params) {
           expanded ? "max-h-96" : "max-h-0"
         }`}
       >
-        <p className='mt-5'>
-          Exercitation et eu ipsum quis quis duis et sunt incididunt magna.
-          Aliquip velit fugiat cillum minim est minim dolore ipsum nulla sit.
-          Sit ea proident ipsum tempor non. Sint esse ut laboris dolor laboris
-          eu. Velit voluptate ex ex do officia. Esse id ea consequat anim.
-        </p>
+        <div className='mt-5'>{params.children}</div>
       </div>
     </div>
   );

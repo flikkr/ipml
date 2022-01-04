@@ -30,6 +30,9 @@
         @apply text-xl text-gray-100 font-Playfair;
     }
     p, label { @apply  text-gray-100 font-Playfair}
+    p > a {
+        @apply link px-1
+    }
     input, textarea { 
         @apply bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full p-2 text-gray-700 leading-tight focus:outline-none focus:bg-white
     }

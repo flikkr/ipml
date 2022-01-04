@@ -29,9 +29,11 @@ function Home() {
           </div>
         </div>
       </section>
-      <div className='container px-6 py-20 md:p-60 md:pb-20 space-y-20 md:space-y-60'>
+      <div className='container px-6 py-20 lg:p-60 lg:pb-20 space-y-20 lg:space-y-60'>
         <SingaporePastSection />
-        <IvanPoluninSection />
+      </div>
+      <IvanPoluninSection />
+      <div className='container px-6 py-20 lg:p-60 lg:pb-20 space-y-20 lg:space-y-60'>
         <ProjectsSection />
         <ContactUsSection />
       </div>
