@@ -80,7 +80,9 @@ export default function Navbar(params) {
               </svg>
             </button>
           </div>
-          <div className='flex-1 flex items-center justify-center sm:items-stretch sm:justify-start'>
+          <div
+            className='flex-1 flex items-center justify-center' /**sm:items-stretch sm:justify-start */
+          >
             <div className='flex-shrink-0 flex items-center'>
               <Link to={AppRoutes.home}>
                 <img
@@ -91,7 +93,7 @@ export default function Navbar(params) {
               </Link>
             </div>
             <div className='hidden sm:block'>
-              <div className='flex space-x-4 font-Playfair tracking-wider'>
+              <div className='space-x-4 font-Playfair tracking-wider'>
                 {items}
               </div>
             </div>
@@ -141,11 +143,12 @@ function getItems(tabs) {
                 {elem?.items.map((item) => (
                   <Menu.Item>
                     {({ active }) => (
-                      <button
-                        className={`w-full p-2 text-left text-sm text-white rounded-md hover:bg-gray-700`}
+                      <a
+                        className={`w-full block p-2 text-left text-sm text-white rounded-md hover:bg-gray-700`}
+                        href={item?.target}
                       >
                         {item.label}
-                      </button>
+                      </a>
                     )}
                   </Menu.Item>
                 ))}

@@ -10,6 +10,7 @@ const NavItems = [
       {
         label: "Dr Ivan Polunin",
         redirect: "/who-are-we",
+        target: "#who-is-ip",
       },
     ],
   },
