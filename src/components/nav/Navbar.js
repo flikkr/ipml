@@ -1,7 +1,9 @@
 import { useState, useEffect, Fragment } from "react";
 import NavItems from "./NavItems";
-import Caret from "../misc/Caret";
 import { Menu, Transition } from "@headlessui/react";
+import { Link } from "react-router-dom";
+import Caret from "../misc/Caret";
+import AppRoutes from "../../services/AppRoutes";
 
 const navScrollColor = "bg-gray-900";
 const navStaticColor = "bg-transparent";
@@ -9,14 +11,15 @@ const navStaticColor = "bg-transparent";
 // https://tailwindui.com/components/application-ui/navigation/navbars
 export default function Navbar(params) {
   const [expanded, setExpanded] = useState(false);
+  const [scrollState, setScrollState] = useState(navStaticColor);
   const items = getItems(NavItems);
 
-  const [scrollState, setScrollState] = useState(navStaticColor);
-
+  // handle bg color from scroll offset
   useEffect(() => {
     let listener = document.addEventListener("scroll", (e) => {
       const threshold = 60;
       const offset = document.scrollingElement.scrollTop;
+
       if (offset > threshold) {
         if (scrollState !== navScrollColor) {
           setScrollState(navScrollColor);
@@ -27,14 +30,12 @@ export default function Navbar(params) {
         }
       }
     });
-    return () => {
-      document.removeEventListener("scroll", listener);
-    };
+    return () => document.removeEventListener("scroll", listener);
   }, [scrollState]);
 
   return (
     <nav
-      className={`transition ease-in-out duration-200 ${scrollState} ${params.className}`}
+      className={`w-full transition ease-in-out duration-200 ${scrollState} ${params.className}`}
     >
       <div className='container mx-auto px-2 sm:px-6 lg:px-8'>
         <div className='relative flex items-center justify-between h-16'>
@@ -81,16 +82,23 @@ export default function Navbar(params) {
           </div>
           <div className='flex-1 flex items-center justify-center sm:items-stretch sm:justify-start'>
             <div className='flex-shrink-0 flex items-center'>
-              <img
-                className='block h-8 w-auto'
-                src='https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg'
-                alt='Workflow'
-              />
+              <Link to={AppRoutes.home}>
+                <img
+                  className='block h-8 w-auto'
+                  src='https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg'
+                  alt='Workflow'
+                />
+              </Link>
             </div>
             <div className='hidden sm:block'>
               <div className='flex space-x-4 font-Playfair tracking-wider'>
                 {items}
               </div>
+            </div>
+            <div className='flex flex-1 justify-end'>
+              <Link className='btn' to={AppRoutes.search}>
+                Home
+              </Link>
             </div>
           </div>
         </div>

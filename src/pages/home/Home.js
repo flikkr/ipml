@@ -11,7 +11,7 @@ import { PageLayout } from "../../components/layout/PageLayout";
 
 function Home() {
   return (
-    <PageLayout title='Ivan Polunin Multimedia Lab'>
+    <PageLayout title='Ivan Polunin Multimedia Lab' extendBodyBehindNavbar>
       <section id='landing' className='relative'>
         <img src={landing} alt='' className='h-screen w-full object-cover' />
         <div className='bg-gray-800 absolute top-0 h-screen w-full bg-opacity-40 z-10'>

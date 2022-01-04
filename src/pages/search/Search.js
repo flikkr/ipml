@@ -1,3 +1,5 @@
+import { PageLayout } from "../../components/layout/PageLayout";
+
 export default function Search() {
-  return <div></div>;
+  return <PageLayout title='Search resources'></PageLayout>;
 }
