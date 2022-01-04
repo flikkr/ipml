@@ -1,17 +1,17 @@
 import landing from "../../assets/landing.jpg";
-import Navbar from "../../components/nav/Navbar";
+
+// sections
 import {
   IvanPoluninSection,
   ContactUsSection,
   SingaporePastSection,
   ProjectsSection,
 } from "./sections/Sections";
-import { Footer } from "../../components/nav/Footer";
+import { PageLayout } from "../../components/layout/PageLayout";
 
 function Home() {
   return (
-    <div>
-      <Navbar className='fixed z-20 w-full' />
+    <PageLayout title='Ivan Polunin Multimedia Lab'>
       <section id='landing' className='relative'>
         <img src={landing} alt='' className='h-screen w-full object-cover' />
         <div className='bg-gray-800 absolute top-0 h-screen w-full bg-opacity-40 z-10'>
@@ -37,8 +37,7 @@ function Home() {
         <ProjectsSection />
         <ContactUsSection />
       </div>
-      <Footer />
-    </div>
+    </PageLayout>
   );
 }
 
