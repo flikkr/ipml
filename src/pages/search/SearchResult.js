@@ -1,3 +1,5 @@
+import ImageNotSupportedIcon from "@mui/icons-material/ImageNotSupported";
+
 export default function SearchResult(params) {
   return (
     <div className='flex flex-row gap-3'>
@@ -10,7 +12,7 @@ export default function SearchResult(params) {
           />
         ) : (
           <div className='bg-gray-500 rounded h-full flex items-center justify-center'>
-            <h4>?</h4>
+            {/* <ImageNotSupportedIcon /> */}
           </div>
         )}
       </div>
