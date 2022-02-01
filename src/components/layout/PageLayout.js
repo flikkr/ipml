@@ -8,10 +8,11 @@ export function PageLayout(params) {
   }, []);
 
   return (
-    <div>
-      <Navbar className='fixed z-20' />
-      {!params?.extendBodyBehindNavbar && <div className='h-16'></div>}
-      <div className='flex flex-col'>{params.children}</div>
+    <div className='flex flex-col h-screen'>
+      <Navbar
+        className={`${params?.extendBodyBehindNavbar && "fixed"} z-20`}
+      />
+      <div className='flex-grow'>{params.children}</div>
       {(!params.hideFooter || params.hideFooter == null) && <Footer />}
     </div>
   );

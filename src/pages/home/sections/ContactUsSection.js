@@ -6,7 +6,12 @@ export function ContactUsSection() {
         <p>
           Interested in working with us or using our material? You can browse
           available resources through the
-          <a href='#'> National Library Board (NLB) </a>
+          <a
+            href='https://www.nas.gov.sg/archivesonline/photographs/search-result'
+            target='_blank'
+          >
+            National Library Board (NLB)
+          </a>
           website. You can contact us using the form below and we will get back
           to you as soon as possible.
         </p>
