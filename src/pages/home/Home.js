@@ -29,13 +29,15 @@ function Home() {
           </div>
         </div>
       </section>
-      <div className='container px-6 py-20 lg:p-60 lg:pb-20 space-y-20 lg:space-y-60'>
-        <SingaporePastSection />
-      </div>
-      <IvanPoluninSection />
-      <div className='container px-6 py-20 lg:p-60 lg:pb-20 space-y-20 lg:space-y-60'>
-        <ProjectsSection />
-        <ContactUsSection />
+      <div className='lg:space-y-20'>
+        <div className='container px-6 py-20 lg:p-60 lg:pb-20'>
+          <SingaporePastSection />
+        </div>
+        <IvanPoluninSection />
+        <div className='container px-6 py-20 lg:p-40 lg:pb-24 space-y-20 lg:space-y-60'>
+          <ProjectsSection />
+          <ContactUsSection />
+        </div>
       </div>
     </PageLayout>
   );

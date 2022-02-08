@@ -99,7 +99,7 @@ export default function Navbar(params) {
             </div>
             <div className='flex flex-1 justify-end'>
               <Link className='btn' to={AppRoutes.search}>
-                Home
+                Browse
               </Link>
             </div>
           </div>
