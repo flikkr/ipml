@@ -4,6 +4,7 @@ import { Menu, Transition } from "@headlessui/react";
 import { Link } from "react-router-dom";
 import Caret from "../misc/Caret";
 import AppRoutes from "../../services/AppRoutes";
+import logo from "../../assets/logo/long/ipml-long-white.png";
 
 const navScrollColor = "bg-gray-900";
 const navStaticColor = "bg-transparent";
@@ -37,7 +38,7 @@ export default function Navbar(params) {
     <nav
       className={`w-full transition ease-in-out duration-200 ${scrollState} ${params.className}`}
     >
-      <div className='container mx-auto px-2 sm:px-6 lg:px-8'>
+      <div className='container mx-auto py-2 px-2 sm:px-6 lg:px-8'>
         <div className='relative flex items-center justify-between h-16'>
           <div className='absolute inset-y-0 left-0 flex items-center sm:hidden'>
             <button
@@ -83,13 +84,9 @@ export default function Navbar(params) {
           <div
             className='flex-1 flex items-center justify-center' /**sm:items-stretch sm:justify-start */
           >
-            <div className='flex-shrink-0 flex items-center'>
+            <div className='flex-shrink-0 flex items-center md:mr-4'>
               <Link to={AppRoutes.home}>
-                <img
-                  className='block h-8 w-auto'
-                  src='https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg'
-                  alt='Workflow'
-                />
+                <img className='block h-11 w-auto' src={logo} alt='Workflow' />
               </Link>
             </div>
             <div className='hidden sm:block'>
