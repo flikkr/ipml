@@ -82,11 +82,11 @@ export default function Navbar(params) {
             </button>
           </div>
           <div
-            className='flex-1 flex items-center justify-center' /**sm:items-stretch sm:justify-start */
+            className='flex w-full items-center justify-center' /**sm:items-stretch sm:justify-start */
           >
             <div className='flex-shrink-0 flex items-center md:mr-4'>
               <Link to={AppRoutes.home}>
-                <img className='block h-11 w-auto' src={logo} alt='Workflow' />
+                <img className='block h-11 w-full' src={logo} alt='IPML Logo' />
               </Link>
             </div>
             <div className='hidden sm:block'>
@@ -94,7 +94,7 @@ export default function Navbar(params) {
                 {items}
               </div>
             </div>
-            <div className='flex flex-1 justify-end'>
+            <div className='flex flex-0 lg:flex-1 justify-end'>
               {/* <Link className='btn' to={AppRoutes.search}>
                 Browse
               </Link> */}
