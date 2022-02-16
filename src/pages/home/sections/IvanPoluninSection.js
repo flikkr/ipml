@@ -3,10 +3,14 @@ import { HighlightItem } from "../../../components/common/Common";
 
 export function IvanPoluninSection() {
   return (
-    <section id='who-is-ip'>
-      <div className='sm:grid sm:grid-cols-2 sm:gap-5 space-y-3 p-10'>
-        <img src={ipImage} alt='Ivan Polunin' className='rounded' />
-        <div>
+    <section id='who-is-ip' className='space-y-40'>
+      <div className='md:grid md:grid-cols-2 md:gap-7 md:space-y-3'>
+        <img
+          className='sm:col-span-2 xl:col-span-1 rounded mb-14 md:mb-5'
+          src={ipImage}
+          alt='Ivan Polunin'
+        />
+        <div className='space-y-14 md:space-y-8 md:col-span-2 xl:col-span-1'>
           <h2 className='mb-7 text-center md:text-left'>
             Who is Ivan Polunin?
           </h2>
@@ -18,7 +22,7 @@ export function IvanPoluninSection() {
             laborum dolore et in dolor. In laboris commodo ipsum consequat non
             et aute magna est. In incididunt nulla ipsum tempor. In labore nulla
             labore ullamco non. Nostrud consequat officia enim aute culpa cillum
-            tempor tempor. Sit eiusmod occaecat laborum 
+            tempor tempor. Sit eiusmod occaecat laborum
           </p>
           <div className='space-y-5 mt-5'>
             <HighlightItem title='The Humanist'>
@@ -53,7 +57,7 @@ export function IvanPoluninSection() {
         </div>
       </div>
 
-      <div className='container mt-20 lg:w-3/5 md:w-full text-center'>
+      <div className='mt-20 lg:w-3/5 md:w-full text-center mx-auto'>
         <h3 className='mb-8'>Watch him in action</h3>
         <div
           className='relative w-full h-0'

@@ -1,40 +1,23 @@
-import landing from "../../assets/landing.jpg";
-
 // sections
 import {
   IvanPoluninSection,
   ContactUsSection,
   SingaporePastSection,
   ProjectsSection,
-} from "./sections/Sections";
+  LandingSection,
+} from "./sections";
 import { PageLayout } from "../../components/layout/PageLayout";
 
 function Home() {
   return (
     <PageLayout title='Ivan Polunin Multimedia Lab' extendBodyBehindNavbar>
-      <section id='landing' className='relative'>
-        <img src={landing} alt='' className='h-screen w-full object-cover' />
-        <div className='bg-gray-800 absolute top-0 h-screen w-full bg-opacity-40 z-10'>
-          <div className='container text-gray-100 z-20 h-full flex flex-col items-start justify-center'>
-            <div className='max-w-xl'>
-              <h1 className='mb-5'>Discover another side of Singapore.</h1>
-              <h4 className='mb-10'>
-                Artefacts from the past documenting life in and around post-war
-                Singapore from the perspective of Dr Ivan Polunin.
-              </h4>
-              <a href='#sg' className='btn'>
-                About
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <div className='lg:space-y-20'>
-        <div className='container px-6 py-20 lg:p-60 lg:pb-20'>
+      <LandingSection />
+      <div className='container'>
+        <div className='py-52 lg:p-72'>
           <SingaporePastSection />
         </div>
         <IvanPoluninSection />
-        <div className='container px-6 py-20 lg:p-40 lg:pb-24 space-y-20 lg:space-y-60'>
+        <div className='py-32 lg:py-64 space-y-32 lg:space-y-60'>
           <ProjectsSection />
           <ContactUsSection />
         </div>

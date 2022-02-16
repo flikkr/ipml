@@ -95,9 +95,9 @@ export default function Navbar(params) {
               </div>
             </div>
             <div className='flex flex-1 justify-end'>
-              <Link className='btn' to={AppRoutes.search}>
+              {/* <Link className='btn' to={AppRoutes.search}>
                 Browse
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
